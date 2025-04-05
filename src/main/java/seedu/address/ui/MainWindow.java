@@ -1,5 +1,7 @@
 package seedu.address.ui;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javafx.collections.ObservableList;
@@ -38,6 +40,7 @@ public class MainWindow extends UiPart<Stage> {
     private ResultDisplay resultDisplay;
     private HelpWindow helpWindow;
     private FindWindow findWindow;
+    private final List<FindWindow> allFindWindows = new ArrayList<>();
 
     @FXML
     private StackPane commandBoxPlaceholder;
@@ -162,13 +165,16 @@ public class MainWindow extends UiPart<Stage> {
      * @param studentList a list of students.
      */
     public void handleFind(ObservableList<Student> studentList) {
+        for (FindWindow fw : allFindWindows) {
+            fw.hide();
+        }
+
+        allFindWindows.clear();
         if (!studentList.isEmpty()) {
-            findWindow.fillInnerParts(logic.getFilteredStudentList());
-            if (!findWindow.isShowing()) {
-                findWindow.show();
-            } else {
-                findWindow.focus();
-            }
+            FindWindow newFindWindow = new FindWindow();
+            newFindWindow.fillInnerParts(studentList);
+            newFindWindow.show();
+            allFindWindows.add(newFindWindow);
         }
     }
 
@@ -182,7 +188,9 @@ public class MainWindow extends UiPart<Stage> {
         logic.setGuiSettings(guiSettings);
         helpWindow.hide();
         primaryStage.hide();
-        findWindow.hide();
+        for (FindWindow fw : allFindWindows) {
+            fw.hide();
+        }
     }
 
     public StudentListPanel getStudentListPanel() {
@@ -204,22 +212,32 @@ public class MainWindow extends UiPart<Stage> {
                 handleHelp();
             }
 
-            if (commandResult.isShowFind()) {
-                handleFind(logic.getFilteredStudentList());
-            }
-
             if (commandResult.isExit()) {
                 handleExit();
             }
 
-            if (!commandText.trim().toLowerCase().startsWith("find") && findWindow.isShowing()) {
-                findWindow.hide();
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Find Window Closed");
-                alert.setHeaderText(null);
-                alert.setContentText("Find Window is automatically closed when"
-                        + " another command is executed");
-                alert.showAndWait();
+            if (!commandText.trim().toLowerCase().startsWith("find")) {
+                boolean anyFindShowing = false;
+
+                for (FindWindow fw : allFindWindows) {
+                    if (fw.isShowing()) {
+                        anyFindShowing = true;
+                        fw.hide();
+                    }
+                }
+
+                if (anyFindShowing) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Find Window Closed");
+                    alert.setHeaderText(null);
+                    alert.setContentText("Find Window is automatically closed when"
+                            + " another command is executed");
+                    alert.showAndWait();
+                }
+            }
+
+            if (commandResult.isShowFind()) {
+                handleFind(logic.getFilteredStudentList());
             }
 
             return commandResult;
