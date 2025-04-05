@@ -33,6 +33,14 @@ public class FindWindow extends UiPart<Stage> {
         getRoot().setMinWidth(900);
         getRoot().setMinHeight(300);
         getRoot().setMaxHeight(400);
+        if (getRoot().getScene() != null) {
+            getRoot().getScene().addEventFilter(javafx.scene.input.KeyEvent.KEY_PRESSED, event -> {
+                if (event.getCode() == javafx.scene.input.KeyCode.ESCAPE) {
+                    hide();
+                    event.consume();
+                }
+            });
+        }
     }
 
     /**
