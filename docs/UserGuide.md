@@ -233,7 +233,8 @@ You can edit a student's details in CareBook.
     <li>There are no restrictions to Address.</li>
     <li>Parameters can be edited in <em>any order</em>.</li>
     <li>For <code>StudentName</code> and <code>ParentName</code>, instead of "S/O" and "D/O" please use SO or DO.</li>
-    <li><code>StudentId</code> should be <strong>4 characters</strong> beginning with A followed by 2 digits and ending with an alphabet.</li>
+<li><code>StudentId</code> must be <strong>unique</strong></li>
+   <li><code>StudentId</code> should be <strong>4 characters</strong> beginning with A followed by 2 digits and ending with an alphabet.</li>
     <li>Edited <code>StudentId</code> should be a new <code>StudentId</code> that has not been assigned to any students.</li>
     <li><code>Phone</code> is restricted to Singapore numbers so they <strong>must</strong> range from 80000000 to 99999999.</li>
     <li><code>Email</code> should have an @ domain.</li>
