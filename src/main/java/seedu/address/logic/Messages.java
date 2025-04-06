@@ -75,6 +75,9 @@ public class Messages {
     public static final String FILE_WRITE_ERROR = "Unable to export attendance summary due to I/O error.";
     public static final String EXPORT_FILE_HEADER = "Student ID, Student Name, Parent Name, Parent's Email, "
             + "Parent's Number, Attendance History (Present Dates)\n";
+    public static final String MESSAGE_INVALID_FILE_NAME = "File name should only consist of alphanumeric"
+            + " characters and underscores (_). " + "\nSpecial characters like ?, /, ., * are invalid.";
+    public static final String MESSAGE_FILE_NAME_TOO_LONG = "File name too long. Please choose a shorter name";
 
     // used by help
     public static final String SHOWING_HELP_MESSAGE = "Opened help window.";
