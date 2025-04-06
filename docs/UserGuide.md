@@ -67,8 +67,7 @@ By the end of this guide, you’ll be a **CareBook pro**, managing your daycare 
    </markdown>
    </panel>
 
-
-2. Download your `carebook.jar` file with the latest release [here](https://github.com/AY2425S2-CS2103T-T11-2/tp/releases).
+2. Download your `carebook.jar` file with the latest release [here](https://github.com/AY2425S2-CS2103T-T11-2/tp/releases/tag/v1.4).
 Scroll down all the way until you see **Assets** and click on `carebook.jar` to install.
 
 3. Move the `.jar` file to the folder you want to use as the home folder for your CareBook.
