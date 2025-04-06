@@ -51,6 +51,8 @@ public class Messages {
 
     public static final String MESSAGE_ALL_STUDENT_ATTENDANCE_UNMARKED = "All students marked as absent.";
     public static final String MESSAGE_ALL_STUDENT_ATTENDANCE_MARKED = "All students marked as present.";
+    public static final String MESSAGE_STUDENT_ALREADY_MARKED = "Student %1$s is already marked as present.";
+    public static final String MESSAGE_STUDENT_ALREADY_UNMARKED = "Student %1$s is already marked as absent.";
 
     //used by add
     public static final String MESSAGE_ADD_SUCCESS = "New student added: %1$s";
