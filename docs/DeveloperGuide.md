@@ -14,7 +14,7 @@
 ## **Acknowledgements**
 
 Some of CareBook features are adapted from the AddressBook-Level2 project created by the [SE-EDU initiative](https://se-education.org).
-As such, CareBook contains some of the code and documentation from AddressBook-Level3. 
+As such, CareBook contains some of the code and documentation from AddressBook-Level3.
 
 The list of third-party libraries used are: [JavaFX](https://openjfx.io/), [Jackson](https://github.com/FasterXML/jackson), [JUnit5](https://github.com/junit-team/junit5)
 
@@ -162,7 +162,7 @@ Classes used by multiple components are in the `seedu.address.commons` package.
 This section describes some noteworthy details on how certain features are implemented.
 
 ### Add Student
-Logic Classes: 
+Logic Classes:
 * <code>AddStudentCommand.java</code>
 * <code>AddStudentCommandParser.java</code>
 
@@ -263,32 +263,32 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 ### Use cases
 (For all use cases below, the **System** is the `CareBook` and the **Actor** is the `Daycare Teacher`, unless specified otherwise.)<br>
 
-#### Use case: UC1 - Add a New Student 
+#### Use case: UC1 - Add a New Student
 **MSS**
-1. User requests to add a student. 
-2. CareBook validates student details (student name, parent name, student ID, phone number, email address and address). 
-3. CareBook adds the new student. 
+1. User requests to add a student.
+2. CareBook validates student details (student name, parent name, student ID, phone number, email address and address).
+3. CareBook adds the new student.
 4. CareBook confirms successful addition.
-    
+
     Use case ends.
 
 **Extensions**
 * 2a. CareBook detects an invalid  student name, parent name, student ID, phone number, email address, or address.
     * 2a1. CareBook displays an error message.
-  
+
       Use case resumes from step 1.
 
 * 2b. CareBook detects a duplicate student ID.
     * 2b1. CareBook displays an error message.
-    
+
       Use case resumes from step 1.
 
 * 2c. CareBook detects an incorrect command format or unknown command.
   * 2c1. CareBook displays an error message.
-    
+
     Use case resumes from step 1.
 
-#### Use case: UC2 - Edit a Student 
+#### Use case: UC2 - Edit a Student
 **MSS**
 1. User requests to edit a student with new details by using student ID.
 2. CareBook verifies that the student exists.
@@ -309,7 +309,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case resumes at step 1.
 
-#### Use case: UC3 - Delete a Student 
+#### Use case: UC3 - Delete a Student
 
 **MSS**
 
@@ -534,15 +534,15 @@ testers are expected to do more *exploratory* testing.
 2. **Saving window preferences**
    1. Resize the window to an optimum size. Move the window to a different location. Close the window.
    1. Re-launch the app by typing `java -jar CareBook.jar` and pressing enter.<br>
-      **Expected**: 
+      **Expected**:
       * The most recent window size and location is retained.
-    
+
 3. **Verifying Logs during launch**
    1. Launch the app by typing `java -jar CareBook.jar` and pressing enter.
    2. Observe the logs printed in the terminal during startup.<br>
-      **Expected**: 
+      **Expected**:
       * Logs should be displayed with appropriate timestamps.
-      * Warnings about JavaFX configuration may appear but should not affect functionality. 
+      * Warnings about JavaFX configuration may appear but should not affect functionality.
 
 #### Deleting a student
 

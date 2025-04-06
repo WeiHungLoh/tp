@@ -24,9 +24,9 @@ Given below are my contributions to the project.
   * Justification: Our current list feature only shows users a list of students with their names and student ID. The rest of information is not shown to prevent cluttering. Thus, find window helps users to retrieve important information.
 
 * **Edited Features**: Added the ability to delete students based on student ID
-  * What it does: This feature allows daycare teachers to delete a student based on his student ID. Since student ID is unique, that is the only way to delete a student from record. 
+  * What it does: This feature allows daycare teachers to delete a student based on his student ID. Since student ID is unique, that is the only way to delete a student from record.
   * Justification: Our student id should be unique.
-  
+
 * **Code contributed**: [RepoSense link]()
 
 * **Project management**:

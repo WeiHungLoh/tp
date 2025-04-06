@@ -20,7 +20,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 * Role: Project Advisor
 
-### Liew Shuang Yuan 
+### Liew Shuang Yuan
 
 <img src="images/shuang26.png" width="200px">
 

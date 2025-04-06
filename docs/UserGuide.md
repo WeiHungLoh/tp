@@ -114,8 +114,8 @@ For more details, see the [features section](#features).
 ## Features
 
 <div style="background-color: #f8d7da; padding: 10px; border-radius: 5px; border-left: 5px solid #dc3545; margin-bottom: 20px;">
-  ❗<strong>Warning:</strong> Please be careful when copying commands from a PDF version of this user guide. 
-If a command is split across lines, spaces could be lost, which might cause errors when you paste 
+  ❗<strong>Warning:</strong> Please be careful when copying commands from a PDF version of this user guide.
+If a command is split across lines, spaces could be lost, which might cause errors when you paste
 it into the application.
 </div>
 
@@ -276,7 +276,7 @@ You can exit the program.
 <p>&nbsp;</p>
 
 #### Exporting attendance summary
-You can export an attendance summary.  
+You can export an attendance summary.
 
 <div style="background-color: #f8d7da; padding: 10px; border-radius: 5px; border-left: 5px solid #dc3545; margin-bottom: 20px;">
   ❗<strong>Warning:</strong> Student records are meant to be exported to a .csv file and viewed in that format. If you copy and paste records in that exported .csv file to other file types like Excel,
@@ -284,8 +284,8 @@ there may be a slight formatting issue.
 </div>
 
 <div style="background-color: #e7f3ff; padding: 10px; border-radius: 5px; border-left: 5px solid #5b9bd5; margin-bottom: 20px;">
-  <strong>ℹ  Information </strong> The exported file will be automatically saved in .csv format, with a timestamp next 
-        to the file name to help identify when it was created. It includes student ID, student name, parent name, 
+  <strong>ℹ  Information </strong> The exported file will be automatically saved in .csv format, with a timestamp next
+        to the file name to help identify when it was created. It includes student ID, student name, parent name,
 parent's email, parent's phone number, and students' attendance history from CareBook.
 </div>
 
@@ -533,14 +533,14 @@ You can mark all students in CareBook as absent.
 **Q:** Is CareBook and Java 17 free to download? <br>
 **A:** Yes, they are both free to download!
 
-**Q:** Do I need an internet connection to use CareBook? <br> 
+**Q:** Do I need an internet connection to use CareBook? <br>
 **A:** No, CareBook works **fully offline**. All data is stored locally on your device.
 
 **Q:** Is my data automatically saved? <br>
 **A:** Yes, CareBook **automatically saves** all changes after each command. No need to manually save!
 
 **Q:** How do I start using this application if I am a novice user? <br>
-**A:** Execute `help` command to check the commands available. For more information about the command usage 
+**A:** Execute `help` command to check the commands available. For more information about the command usage
 of each command, see the [features section](#features).
 
 **Q:** Is there a way to recover deleted or cleared student records? <br>
