@@ -16,7 +16,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 <img src="images/weihungloh.png" width="200px">
 
 [[github](https://github.com/weihungloh)]
-[[portfolio](team/weihung.md)]
+[[portfolio](team/weihungloh.md)]
 
 * Role: Project Advisor
 
