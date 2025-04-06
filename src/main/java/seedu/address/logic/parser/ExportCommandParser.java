@@ -26,13 +26,14 @@ public class ExportCommandParser implements Parser<ExportCommand> {
         requireNonNull(args);
         String trimmedArgs = args.trim();
         boolean fileNameTooLong = trimmedArgs.length() > MAX_FILENAME_LENGTH;
+        boolean isValidFileName = trimmedArgs.matches(VALIDATION_REGEX);
 
         if (args.isEmpty()) {
             throw new ParseException((String.format(MESSAGE_INVALID_COMMAND_FORMAT,
                     ExportCommand.MESSAGE_USAGE)));
         }
 
-        if (!trimmedArgs.matches(VALIDATION_REGEX)) {
+        if (!isValidFileName) {
             throw new ParseException(MESSAGE_INVALID_FILE_NAME);
         }
 
