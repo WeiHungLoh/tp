@@ -577,20 +577,20 @@ testers are expected to do more *exploratory* testing.
 
 1. **Dealing with missing data files**
    1. Navigate to the application's `data` directory.
-   2. Delete or rename the data file (e.g., addressbook.json). 
+   2. Delete or rename the data file (e.g., carebook.json). 
    3. Launch the app.
       **Expected:**
        * The application should create a new default data file if one does not exist.
        * The list of students should contain default sample student data.
-       * A warning message (e.g., “Creating a new data file data\addressbook.json populated with a sample AddressBook.”) should be logged.
+       * A warning message (e.g., “Creating a new data file data\carebook.json populated with a sample CareBook.”) should be logged.
    
 2. **Dealing with corrupted data files**
-    1. Navigate to the application's `data` directory and open `addressbook.json` in a text editor.
+    1. Navigate to the application's `data` directory and open `carebook.json` in a text editor.
     2. Modify the content to be invalid JSON (e.g., remove a closing brace or change a key name to an invalid format).
     3. Save the file and launch the app.
        **Expected:**
         * The application should detect the corruption and handle it.
-        * A warning message (e.g., "WARNING: Error reading from jsonFile file data\addressbook.json: ...") should be logged.
+        * A warning message (e.g., "WARNING: Error reading from jsonFile file data\carebook.json: ...") should be logged.
         * The app will launch with an empty student list.
         * The application should not crash and should remain functional.
 
