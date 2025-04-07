@@ -532,22 +532,22 @@ testers are expected to do more *exploratory* testing.
 #### Launch and shutdown
 
 1. **Initial launch**
-   1. Download the `CareBook.jar` file and copy into an empty folder
-   2. Ensure you have `Java 17` or above installed in your computer. 
-   3. Open a command terminal, `cd` into the folder you placed your .jar file and type `java -jar CareBook.jar` and press enter to run CareBook application.<br>
+   1. Download the `CareBook.jar` file and copy into an empty folder<br><br>
+   1. Ensure you have `Java 17` or above installed in your computer.<br><br>
+   1. Open a command terminal, `cd` into the folder you placed your .jar file and type `java -jar CareBook.jar` and press enter to run CareBook application.<br>
       **Expected:** 
       * Shows the GUI with a set of sample students. 
-      * The window size may not be optimum.
+      * The window size may not be optimum.<br><br>
     
-2. **Saving window preferences**
-   1. Resize the window to an optimum size. Move the window to a different location. Close the window.
+1. **Saving window preferences**
+   1. Resize the window to an optimum size. Move the window to a different location. Close the window.<br><br>
    1. Re-launch the app by typing `java -jar CareBook.jar` and pressing enter.<br>
       **Expected**:
-      * The most recent window size and location is retained.
+      * The most recent window size and location is retained.<br><br>
 
-3. **Verifying Logs during launch**
-   1. Launch the app by typing `java -jar CareBook.jar` and pressing enter.
-   2. Observe the logs printed in the terminal during startup.<br>
+1. **Verifying Logs during launch**
+   1. Launch the app by typing `java -jar CareBook.jar` and pressing enter.<br><br>
+   1. Observe the logs printed in the terminal during startup.<br>
       **Expected**:
       * Logs should be displayed with appropriate timestamps.
       * Warnings about JavaFX configuration may appear but should not affect functionality.
@@ -555,68 +555,68 @@ testers are expected to do more *exploratory* testing.
 #### Deleting a student
 
 1. **Deleting a student while all students are being shown**
-   1. Prerequisites: List all students using the `list` command. Multiple students in the list.
+   1. Prerequisites: List all students using the `list` command. Multiple students in the list.<br><br>
    1. Test case: `delete A10A`<br>
       **Expected**: 
-      * Student with ID A10A is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.
+      * Student with ID A10A is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.<br><br>
+   1. Test case: `delete A99Z`<br>
+      **Expected:**
+      * No student is deleted. Error details shown in the status message. Status bar remains the same.<br><br>
+   1. Other incorrect delete commands to try: `delete`, `delete a10`, `...` (where student ID is invalid)<br>
+      **Expected:**
+      * Similar to previous.<br><br>
+
+1. **Deleting a Student When No Students Are Displayed**
+   1. Prerequisites: Clear the list using the `clear` command.<br><br>
    1. Test case: `delete A99Z`<br>
       **Expected:**
       * No student is deleted. Error details shown in the status message. Status bar remains the same.
-   1. Other incorrect delete commands to try: `delete`, `delete a10a`, `...` (where student ID is not capitalised)<br>
-      **Expected:**
-      * Similar to previous.
-
-2.  **Deleting a Student When No Students Are Displayed**
-    1. Prerequisites: Clear the list using the `clear` command.
-    2. Test case: `delete A99Z`<br>
-       **Expected:**
-       * No student is deleted. Error details shown in the status message. Status bar remains the same.
 
 
 #### Saving data
 
 1. **Dealing with missing data files**
-   1. Navigate to the application's `data` directory.
-   2. Delete or rename the data file (e.g., carebook.json). 
-   3. Launch the app.
+   1. Navigate to the application's `data` directory.<br><br>
+   1. Delete or rename the data file (e.g., carebook.json). <br><br>
+   1. Launch the app.
       **Expected:**
        * The application should create a new default data file if one does not exist.
        * The list of students should contain default sample student data.
-       * A warning message (e.g., “Creating a new data file data\carebook.json populated with a sample CareBook.”) should be logged.
+       * A warning message (e.g., “Creating a new data file data\carebook.json populated with a sample CareBook.”) should be logged.<br><br>
    
-2. **Dealing with corrupted data files**
-    1. Navigate to the application's `data` directory and open `carebook.json` in a text editor.
-    2. Modify the content to be invalid JSON (e.g., remove a closing brace or change a key name to an invalid format).
-    3. Save the file and launch the app.
-       **Expected:**
-        * The application should detect the corruption and handle it.
-        * A warning message (e.g., "WARNING: Error reading from jsonFile file data\carebook.json: ...") should be logged.
-        * The app will launch with an empty student list.
-        * The application should not crash and should remain functional.
+1. **Dealing with corrupted data files**
+   1. Navigate to the application's `data` directory and open `carebook.json` in a text editor.<br><br>
+   1. Modify the content to be invalid JSON (e.g., remove a closing brace or change a key name to an invalid format).<br><br>
+   1. Save the file and launch the app.
+      **Expected:**
+       * The application should detect the corruption and handle it.
+       * A warning message (e.g., "WARNING: Error reading from jsonFile file data\carebook.json: ...") should be logged.
+       * The app will launch with an empty student list.
+       * The application should not crash and should remain functional.<br><br>
 
-3. **Ensuring data is saved after adding/deleting a student**
-    1. Launch the app and modify the data by adding/deleting a student.
-    2. Close the application and re-open it.
-       **Expected:**
-        * The added/deleted student should appear/not appear in the list.
+1. **Ensuring data is saved after adding/deleting a student**
+   1. Launch the app and modify the data by adding/deleting a student.<br><br>
+   1. Close the application and re-open it.
+      **Expected:**
+       * The added/deleted student should appear/not appear in the list.
 
 ## **Appendix: Effort**
 1. **Difficulty Level and Challenges Faced**
 
-   Our project builds on AddressBook Level 3 (AB3) but required significant refactoring to better fit our target users' needs. As a result, the complexity of data management, validation, and UI representation increased.<br>
+   Our project builds on AddressBook Level 3 (AB3) but required significant refactoring to better fit our target users' needs. As a result, the complexity of data management, validation, and UI representation increased.<br><br>
     **Key challenges included:**
     * Extensive refactoring: From `person` model to `student` model.
     * Editing and updating test cases: Ensuring existing test cases remained valid after structural changes while writing new ones for added functionalities.
-    * Maintaining code consistency: Ensuring that refactored components integrated smoothly without introducing regressions.
+    * Maintaining code consistency: Ensuring that refactored components integrated smoothly without introducing regressions.<br><br>
     
-2. **Effort Required**
+1. **Effort Required**
 
    The project effort was distributed across key areas:<br>
    * Feature Development (45%) – Modifying existing commands and implementing new commands (e.g. mark, markall, export).
    * Testing & Debugging (30%) – Updating test cases, refactoring test structure, and ensuring correctness after modifications.
-   * Data Management & Storage (25%) – Modifying JSON storage to handle new fields in `Student` model.
+   * Data Management & Storage (25%) – Modifying JSON storage to handle new fields in `Student` model.<br><br>
     
-3. **Achievements**
+1. **Achievements**
     * Successfully modified AB3 to align with our target users' needs while maintaining its core functionality.
     * Refactored the codebase effectively, improving maintainability and extensibility.
 
