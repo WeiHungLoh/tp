@@ -142,7 +142,7 @@ You can add a student to CareBook.
     <li>No restrictions to Address.</li>
     <li><code>StudentId</code> must be <strong>unique</strong></li>
     <li><code>StudentId</code> should be <strong>4 characters</strong> beginning with A followed by 2 digits and ending with an alphabet.</li>
-    <li><code>Phone</code> is restricted to Singapore numbers so they <strong>must</strong> range from 80000000 to 99999999.</li>
+    <li><code>Phone</code> is restricted to Singapore numbers so they <strong>must</strong> be exactly 8 digits and begin with 6, 8 or 9.</li>
     <li><code>Email</code> should have an @ domain.</li>
   </ul>
 </div>
@@ -236,7 +236,7 @@ You can edit a student's details in CareBook.
 <li><code>StudentId</code> must be <strong>unique</strong></li>
    <li><code>StudentId</code> should be <strong>4 characters</strong> beginning with A followed by 2 digits and ending with an alphabet.</li>
     <li>Edited <code>StudentId</code> should be a new <code>StudentId</code> that has not been assigned to any students.</li>
-    <li><code>Phone</code> is restricted to Singapore numbers so they <strong>must</strong> range from 80000000 to 99999999.</li>
+    <li><code>Phone</code> is restricted to Singapore numbers so they <strong>must</strong> be exactly 8 digits and begin with 6, 8 or 9.</li>
     <li><code>Email</code> should have an @ domain.</li>
     <li><strong>At least one field</strong> is required in addition to providing the student ID of the student you want to edit.</li>
   </ul>

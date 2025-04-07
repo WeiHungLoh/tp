@@ -22,7 +22,7 @@ public class Messages {
             "Student ID should be 4 characters beginning with A followed by 2 digits "
                     + "and ending with an alphabet.";
     public static final String PHONE_MESSAGE_CONSTRAINTS =
-            "Phone numbers should only contain numbers, and should be between 80000000 and 99999999.";
+            "Phone numbers should be exactly 8 digits, and should begin with either 6, 8 or 9.";
     public static final String EMAIL_MESSAGE_CONSTRAINTS = "Emails should be of the format local-part@domain "
             + "and adhere to the following constraints:\n"
             + "1. The local-part should only contain alphanumeric characters and these special characters, excluding "

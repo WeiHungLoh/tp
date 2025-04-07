@@ -172,8 +172,8 @@ This is illustrated in the activity diagram below:
 
 <puml src="diagrams/AddStudentCommand.puml" width="600"/>
 
-* isValidPhone ensures that phone number is between 80000000 and 99999999.
-* isValidEmail ensures that whether email has the @ domain.
+* isValidPhone ensures that phone number is exactly 8 digits and begin with either 6, 8 or 9.
+* isValidEmail ensures that email has the @ domain.
 * isUniqueId ensures that <StudentId> is unique.
 * isValidParentName and isValidStudentName both ensure that they only contain alphanumeric characters
 
