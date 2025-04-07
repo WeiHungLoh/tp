@@ -562,7 +562,7 @@ testers are expected to do more *exploratory* testing.
    1. Test case: `delete A99Z`<br>
       **Expected:**
       * No student is deleted. Error details shown in the status message. Status bar remains the same.<br><br>
-   1. Other incorrect delete commands to try: `delete`, `delete a10`, `...` (where student ID is invalid)<br>
+   1. Other incorrect delete commands to try: `delete`, `delete a10`, `...` (where student ID is invalid).<br>
       **Expected:**
       * Similar to previous.<br><br>
 
